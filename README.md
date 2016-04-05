@@ -3,9 +3,9 @@ A test project to recreate, evaluate, and illustrate a bug where the navigation 
 
 ## The Issue ##
 
-I have a custom modal presentation, where my modal uses a `UIPresentationController` to limit it's width to a fraction of the screen's width when `horizontalSizeClass == UIUserInterfaceSizeClassRegular`.
+I have a custom modal presentation, where my modal uses a `UIPresentationController` to limit its width to a fraction of the screen's width when `horizontalSizeClass == UIUserInterfaceSizeClassRegular`.
 
-My `UIPresentationController` utilizes it's `overrideTraitCollection` property to override the presented controller's `horizontalSizeClass` to a `compact` mode, since these views are within a smaller width.
+My `UIPresentationController` utilizes its `overrideTraitCollection` property to override the presented controller's `horizontalSizeClass` to a `compact` mode, since these views are within a smaller width.
 
 However, overriding the trait collection seems to introduce a bug, where, when popping a controller within the navigation stack on this "half modal" presentation, the animation sometimes jumps off screen left or right when in landscape.
 
